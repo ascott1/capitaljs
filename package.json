@@ -11,7 +11,7 @@
     "build": "npm run bundle && npm run compress",
     "babel-build": "cd src; babel ./**.js -d ../lib && babel ./**/*.js -d ../lib",
     "prepublish": "npm run babel-build",
-    "posttest": "npm run browser-build",
+    "posttest": "npm run build",
     "watch": "onchange 'src/**/*.js' 'test/**/*.js' -v -- npm test"
   },
   "repository": {
