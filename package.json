@@ -9,7 +9,7 @@
     "bundle": "browserify src/index.js --standalone capitaljs -t es6ify | derequire > capital.js",
     "compress": "uglifyjs capital.js -o capital.min.js",
     "build": "npm run bundle && npm run compress",
-    "babel-build": "cd src; babel ./*.js -d ../lib",
+    "babel-build": "cd src; babel ./**.js -d ../lib && babel ./**/*.js -d ../lib",
     "prepublish": "npm run babel-build",
     "posttest": "npm run browser-build",
     "watch": "onchange 'src/**/*.js' 'test/**/*.js' -v -- npm test"
@@ -35,9 +35,6 @@
   "devDependencies": {
     "amortize": "^0.2.3",
     "babel": "^5.8.23",
-    "babel-cli": "^6.2.0",
-    "babel-core": "^6.2.1",
-    "babel-preset-es2015": "^6.1.18",
     "browserify": "^11.2.0",
     "derequire": "^2.0.2",
     "es6ify": "^1.6.0",
