@@ -73,3 +73,5 @@ coverage.xml
 #############
 node_modules/
 lib/
+capital.min.js
+capital.js
